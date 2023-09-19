@@ -1,0 +1,33 @@
+<h1>Pagina productos en tiempo real</h1>
+
+<h2>Formulario creacion Producto</h2>
+
+<form id="createProductForm" >
+  <input type="numbr" placeholder="Id del producto" name="id" />
+  <br />
+  <input type="text" placeholder="Nombre del producto" name="title" />
+  <input
+    type="text"
+    placeholder="Descripcion del producto"
+    name="description"
+  />
+  <br />
+  <input type="number" placeholder="Precio del producto" name="precio" />
+  <br />
+  <input type="text" placeholder="Codigo del producto" name="code" />
+  <br />
+  <input type="number" placeholder="Stock del producto" name="stock" />
+  <button type="submit">Agregar producto</button>
+
+</form>
+<hr>
+<h2>Listado de productos</h2>
+
+<div id="productList"></div>
+
+// agregamos un script para que funcione el web socket del lado del cliente
+<script src="socket.io/socket.io.js"></script>
+//esta libreria sale de la carpeta node modules, en client-dist, es como una
+carpeta publica para el front.
+
+<script src="js/realTime.js"></script>

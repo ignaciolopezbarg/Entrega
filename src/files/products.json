@@ -1,0 +1,91 @@
+[
+  {
+    "id": 1,
+    "title": "Adizzero",
+    "description": "running",
+    "precio": 2500,
+    "code": "AABC1",
+    "stock": 30
+  },
+
+  {
+    "id": 2,
+    "title": "Asics Fly",
+    "description": "running",
+    "precio": 5500,
+    "code": "AABC2",
+    "stock": 10
+  },
+
+  {
+    "id": 3,
+    "title": "Nike Jumbo",
+    "description": "golf",
+    "precio": 8500,
+    "code": "AABC3",
+    "stock": 3
+  },
+
+  {
+    "id": 4,
+    "title": "Asics Valley",
+    "description": "hicking",
+    "precio": 12500,
+    "code": "AABC4",
+    "stock": 8
+  },
+
+  {
+    "id": 5,
+    "title": "Adidas NY",
+    "description": "running",
+    "precio": 4500,
+    "code": "AABC5",
+    "stock": 22
+  },
+
+  {
+    "id": 6,
+    "title": "Fila Carbon",
+    "description": "running",
+    "precio": 22500,
+    "code": "AABC6",
+    "stock": 20
+  },
+
+  {
+    "id": 7,
+    "title": "Puma Urban",
+    "description": "volley",
+    "precio": 9500,
+    "code": "AABC7",
+    "stock": 10
+  },
+
+  {
+    "id": 8,
+    "title": "Nike Wimbledon15",
+    "description": "tennis",
+    "precio": 9500,
+    "code": "AABC8",
+    "stock": 32
+  },
+
+  {
+    "id": 9,
+    "title": "Topper Wings",
+    "description": "running",
+    "precio": 1500,
+    "code": "AABC9",
+    "stock": 25
+  },
+
+  {
+    "id": 10,
+    "title": "Puma Kenia",
+    "description": "basket",
+    "precio": 22500,
+    "code": "AABC10",
+    "stock": 6
+  }
+]
