@@ -11,7 +11,7 @@ const router = Router();
 
 //se crea peticion para ver que funcione la ruta
 
-productsRouter.get("/", async (req, res) => {
+Router.get("/", async (req, res) => {
   try {
     const product = await productsService.getProducts();
     res.json({ message:"listado productos" });
@@ -20,7 +20,7 @@ productsRouter.get("/", async (req, res) => {
   }
 });
 //agregar productos:
-productsRouter.post("/",async (req,res)=>{
+Router.post("/",async (req,res)=>{
   try{
     const productInfo = req.body;
   }catch(error){
@@ -28,7 +28,7 @@ productsRouter.post("/",async (req,res)=>{
   }
 })
 //ruta para obtener el producto por id:
-productsRouter.get("/:pid", async (req, res) => {
+Router.get("/:pid", async (req, res) => {
   try {
     const productId = parseInt(req.params.pid);
 const product = await productsService.getProductbyId(productId);
@@ -38,7 +38,7 @@ const product = await productsService.getProductbyId(productId);
   }
 });
 //eliminar producto:
-productsRouter.delete("/:pid",async(req,res)=>{
+Router.delete("/:pid",async(req,res)=>{
   try {
     const productId = parseInt(req.params.pid);
     await productsService.deleteProduct(productId);

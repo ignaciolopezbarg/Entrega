@@ -1,7 +1,7 @@
 import express from "express";
 //importamos la variable dirname donde esta la ruta para referenciar todos los archivos y carpetas del proyecto(la creamos en utils.js)
 import { _dirname } from "./util.js";
-import path from path;
+import path from "path";
 import { engine } from "express-handlebars";
 import { Server } from "socket.io";
 import { productsService } from "./persistence/index.js";
@@ -17,7 +17,7 @@ const port = 8080;
 const app = express();
 
 //midleware:
-app.use(express.static(path.join(__dirname,"/public")));
+app.use(express.static(path.join(_dirname,"/public")));
 
  const httpServer = app.listen(8080,()=> console.log(`Servidor funcionando en el puerto ${port}`));
 //el servidor se guarda en una variable, servidor http
@@ -27,7 +27,7 @@ const io = new Server(httpServer);
 
 app.engine('.hbs', engine({extname: '.hbs'}));
 app.set('view engine', '.hbs');
-app.set('views', path.join(__dirname,"/views"));
+app.set('views', path.join(_dirname,"/views"));
 
 app.use(express.urlencoded({extended:true}));
 
@@ -37,7 +37,7 @@ app.use("/api/products",productsRouter);//primer parametro,rutaprincipal, segund
 app.use("/api/carts",cartsRouter);
 
 //socket server
-io.on("connection", (socket)=>{
+io.on("connection", async(socket)=>{
     console.log ('cliente conectado');
 const products = await productsService.getProducts();
 socket.emit("productsArray",products)

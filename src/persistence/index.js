@@ -1,8 +1,8 @@
 import { ProductsManagerFiles } from "./files/productsManagerFiles.js";
 import { CartsManagerFiles } from "./files/cartsManagerFiles.js";
 
-//importamos de utils.js la variable _dirname
-import { _dirname } from "../utils.js";
+//importamos de util.js la variable _dirname
+import { _dirname } from "./util.js";
 // controlamos  la ruta con un console.log
 //console.log(" _dirname:", _dirname)
 

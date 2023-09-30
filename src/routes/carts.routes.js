@@ -8,7 +8,7 @@ cartsRouter.use(express.json);
 
 //se crea peticion para ver que funcione la ruta
 
-cartsRouter.get("/", async (req, res) => {
+Router.get("/", async (req, res) => {
   try {
     const carts = await cartsService.getCarts();
     res.json({ data: carts });
@@ -17,7 +17,7 @@ cartsRouter.get("/", async (req, res) => {
   }
 });
 
-cartsRouter.post("/", async (req, res) => {
+Router.post("/", async (req, res) => {
   try {
     const cartCreate = await cartsService.createCart();
     res.json({ data: cartCreate });
@@ -26,7 +26,7 @@ cartsRouter.post("/", async (req, res) => {
   }
 });
 
-cartsRouter.post("/", async(req,res)=>{
+Router.post("/", async(req,res)=>{
   try{
     const cartCreate = await cartsService.createCart();
     res.json({data:cartCreate});
@@ -35,7 +35,7 @@ cartsRouter.post("/", async(req,res)=>{
   }
 });
 //Listado de los prods, en cada cartId:
-cartsRouter.get("/:cid",async (req,res)=>{
+Router.get("/:cid",async (req,res)=>{
   try{
     const cartId = parseInt(req.params.cid)
     const getCartById = await cartsService.getCartById(cartId);
@@ -45,7 +45,7 @@ cartsRouter.get("/:cid",async (req,res)=>{
   }
 });
 //agregamos prods al arreglo products del carro:
-cartsRouter.post("cid/product/:pid",async (req,res)=>{
+Router.post("cid/product/:pid",async (req,res)=>{
   try{
     const cartId = parseInt(req.params.cid);
     const productId = parseInt(req.params.pid);

@@ -1,5 +1,5 @@
 import fs from "fs";
-export class CartManager{
+export class CartsManager{
     constructor(filePath){
         this.filePath = filePath
     };
